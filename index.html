@@ -18,6 +18,8 @@
         <script src="js/newScore.js"></script>
         <script src="js/showScore.js"></script>
         <script src="js/stopScore.js"></script>
+        <script src="js/loadScore.js"></script>
+        <script src="js/listScores.js"></script>
         <script src="js/modal.js"></script>
         <script src="js/createVideoForm.js"></script>
     </head>
@@ -58,10 +60,11 @@
                     title="Store online">&#x2b06;&#x2601;</button>
                 <button
                     class="btn btn-ani"
-                    onclick="location.href='list_scores.php';"
+                    onclick="listScores();"
                     title="Get online">&#x2b07;&#x2601;</button>
     </div>
 
+    <div id="list_server_score"></div>
     <div id="video_form" class="modal">
         <span onclick="showHide('video_form');" class="close" title="Close Modal">×</span>
             <div class="container modal-content" id="video_input_form">

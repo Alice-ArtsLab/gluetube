@@ -3,7 +3,7 @@ function storeScore(piece){
     var url = "storeScore.php";
     xhr.open("POST", url, true);
     xhr.setRequestHeader("Content-type", "application/json");
-    var vars = JSON.stringify({ data : piece})
+    var vars = JSON.stringify(piece)
     xhr.setRequestHeader("Content-type", "text/xml");
     xhr.onreadystatechange = function() {
         if(xhr.readyState == 4 && xhr.status == 200) {
