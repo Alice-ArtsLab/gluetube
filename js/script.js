@@ -24,7 +24,7 @@ var Video = {
     volume: 0,
     posx: 0,
     posy: 0,
-    width: 0,
-    height: 0,
+    width: 800,
+    height: 600,
     schedule: 0
 };
