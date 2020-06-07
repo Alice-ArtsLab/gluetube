@@ -2,11 +2,11 @@
 function showScore(piece) {
 
     // Load the meta data
-    document.getElementById("title").value = piece.title;
-    document.getElementById("author").value = piece.author;
-    document.getElementById("date").value = piece.date;
-    document.getElementById("description").value = piece.description;
-    document.getElementById("license").value = piece.license;
+    // document.getElementById("title").value = piece.title;
+    // document.getElementById("author").value = piece.author;
+    // document.getElementById("date").value = piece.date;
+    // document.getElementById("description").value = piece.description;
+    // document.getElementById("license").value = piece.license;
 
     // Load the score
     var table = document.getElementById("score_table");
