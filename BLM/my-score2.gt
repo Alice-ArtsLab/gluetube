@@ -1,7 +1,0 @@
-[
-{"url":"HCM8F1LPCVU","startTime":33,"endTime":131,"repeat":1,"volume":80,"posx":560,"posy":25,"width":600,"height":450,"schedule":0},
-{"url":"u4lcUooNNLY","startTime":0,"endTime":10,"repeat":4,"volume":20,"posx":560,"posy":25,"width":600,"height":450,"schedule":98000},
-{"url":"2x8KgPf8Pq0","startTime":41,"endTime":92,"repeat":1,"volume":100,"posx":560,"posy":25,"width":600,"height":450,"schedule":98000},
-{"url":"u4lcUooNNLY","startTime":12,"endTime":103,"repeat":1,"volume":50,"posx":560,"posy":25,"width":600,"height":450,"schedule":137000},
-{"url":"1XhIiUrBalI","startTime":148,"endTime":157,"repeat":32,"volume":60,"posx":560,"posy":25,"width":600,"height":450,"schedule":240000}
-]
