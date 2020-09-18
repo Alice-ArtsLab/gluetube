@@ -1,82 +1,45 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Gluetube</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="css/indexStyle.css">
-</head>
-<body>
-    <!-- Links (sit on top) -->
-    <div class="w3-top">
-        <div class="w3-row w3-large w3-light-grey">
-            <div class="w3-col s3">
-                <a href="#" class="w3-button w3-block">Home</a>
-            </div>
-            <div class="w3-col s3">
-                <a href="atelie.html" class="w3-button w3-hover-red w3-block">Studio</a>
-            </div>
-            <div class="w3-col s3">
-                <a href="galeria.html" class="w3-button w3-hover-green w3-block">Gallery</a>
-            </div>
-            <div class="w3-col s3">
-                <a href="about.html" class="w3-button w3-block">About</a>
-            </div>
-        </div>
+---
+layout: page
+title: GLUETUBE
+description: Collage tool using digital media!
+---
+<!-- Slideshow -->
+<div class="w3-display-container mySlides">
+    <img src="/assets/images/TM2_6551.jpg" style="width:100%;height:500px">
+    <div class="w3-display-topleft w3-container w3-padding-32">
+        <span class="w3-white w3-padding-large w3-animate-bottom">Performance created using Gluetube.</span>
     </div>
-
-    <!-- Content -->
-    <div class="w3-content" style="max-width:1100px;max-height:600px;margin-top:80px;margin-bottom:80px">
-
-        <div class="w3-panel">
-            <h1><b>GLUETUBE</b></h1>
-            <p>Collage tool using digital media!</p>
-        </div>
-
-        <!-- Slideshow -->
-        <div class="w3-container">
-            <div class="w3-display-container mySlides">
-                <img src="images/TM2_6551.jpg" style="width:100%;height:500px">
-                <div class="w3-display-topleft w3-container w3-padding-32">
-                    <span class="w3-white w3-padding-large w3-animate-bottom">Performance created using Gluetube.</span>
-                </div>
-            </div>
-            <!-- <div class="w3-display-container mySlides">
-                <img src="/images/workbench.jpg" style="width:100%">
-                <div class="w3-display-middle w3-container w3-padding-32">
-                    <span class="w3-white w3-padding-large w3-animate-bottom">Klorim tipsum</span>
-                </div>
-            </div>
-            <div class="w3-display-container mySlides">
-                <img src="/images/sound.jpg" style="width:100%">
-                <div class="w3-display-topright w3-container w3-padding-32">
-                    <span class="w3-white w3-padding-large w3-animate-bottom">Blorum pipsum</span>
-                </div>
-            </div> -->
-
-            <!-- Slideshow next/previous buttons -->
-            <div class="w3-container w3-dark-grey w3-padding w3-xlarge">
-                <div class="w3-left" onclick="plusDivs(-1)"><i class="fa fa-arrow-circle-left w3-hover-text-teal"></i></div>
-                <div class="w3-right" onclick="plusDivs(1)"><i class="fa fa-arrow-circle-right w3-hover-text-teal"></i></div>
-
-                <div class="w3-center">
-                    <span class="w3-tag demodots w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
-                    <!-- <span class="w3-tag demodots w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
-                    <span class="w3-tag demodots w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span> -->
-                </div>
-            </div>
-        </div>
-
+</div>
+<div class="w3-display-container mySlides">
+    <img src="/assets/images/TM2_6551.jpg" style="width:100%;height:500px">
+    <div class="w3-display-topmiddle w3-container w3-padding-32">
+        <span class="w3-white w3-padding-large w3-animate-bottom">TESTE COM DUAS IMAGENS</span>
     </div>
+</div>
+<div class="w3-display-container mySlides">
+    <img src="/assets/images/TM2_6551.jpg" style="width:100%;height:500px">
+    <div class="w3-display-topright w3-container w3-padding-32">
+        <span class="w3-white w3-padding-large w3-animate-bottom">TESTE COM TRÊS IMAGENS</span>
+    </div>
+</div>
+<div class="w3-display-container mySlides">
+    <img src="/assets/images/TM2_6551.jpg" style="width:100%;height:500px">
+    <div class="w3-display-topmiddle w3-container w3-padding-32">
+        <span class="w3-white w3-padding-large w3-animate-bottom">TESTE COM QUATRO IMAGENS</span>
+    </div>
+</div>
 
-    <!-- Footer -->
-    <footer class="w3-container w3-padding-32 w3-light-grey w3-center">
-        <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
-    </footer>
+<!-- Slideshow next/previous buttons -->
+<div class="w3-container w3-dark-grey w3-padding w3-xlarge">
+    <div class="w3-left" onclick="plusDivs(-1)"><i class="fa fa-arrow-circle-left w3-hover-text-teal"></i></div>
+    <div class="w3-right" onclick="plusDivs(1)"><i class="fa fa-arrow-circle-right w3-hover-text-teal"></i></div>
 
-    <script src="js/index/slideShow.js"></script>
-</body>
-</html>
+    <div class="w3-center">
+        <span class="w3-tag demodots w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
+        <span class="w3-tag demodots w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
+        <span class="w3-tag demodots w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
+        <span class="w3-tag demodots w3-border w3-transparent w3-hover-white" onclick="currentDiv(4)"></span>
+    </div>
+</div>
+
+<script>showDivs(1);</script>

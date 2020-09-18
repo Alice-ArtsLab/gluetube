@@ -9,7 +9,7 @@ function play(video, index) {
     element.setAttribute('id', idContainer);
     element.setAttribute('class', 'dragDiv');
     element.style.left = video.posx;
-    element.style.top = video.posy;
+    element.style.top = video.posy + 60;
     document.getElementById('ytplayer').appendChild(element);
 
     // DIV barra de move up.

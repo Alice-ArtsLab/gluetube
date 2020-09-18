@@ -1,3 +1,10 @@
+table,th,td {
+    border: 1px solid white;
+}
+table {
+    border-collapse: collapse;
+}
+
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
     -webkit-appearance: none;
@@ -32,12 +39,24 @@ body {
 
 /* MENUS */
 .container {
+    background-color: #fefefe;
     width: 100%;
     position: static;
     padding: 10px;
 }
 
-.menu-0 {
+.menu {
+    position: relative;
+    margin-top:60px;
+}
+
+.menu-1 {
+    position: relative;
+	float: left;
+    padding-left: 15px;
+}
+
+/* .menu-0 {
     width: 1155px;
     border: 1px solid white;
     position: static;
@@ -51,13 +70,7 @@ body {
     position: relative;
 	float: left;
     padding: 10px;
-}
-
-.menu-2 {
-    position: relative;
-	float: left;
-    padding-left: 15px;
-}
+}*/
 
 /* BUTTON */
 .btn {

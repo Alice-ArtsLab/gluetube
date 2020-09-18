@@ -1,0 +1,45 @@
+html,body,h1,h2,h3,h4 {font-family:"Lato", sans-serif}
+.mySlides {display:none}
+/* .w3-tag, .fa {cursor:pointer}
+.w3-tag {height:15px;width:15px;padding:0;margin-top:6px} */
+
+p{
+	font-family: Helvetica, sans-serif;
+	margin: auto;
+}
+
+.centralized {
+    margin-left: 23%;
+    margin-top: 10%;
+    padding: 10px;
+}
+.centralized p {
+    font-size: 36px;
+    font-weight: 600;
+	color: #fff;
+    padding-left: 32%;
+    padding-top: 24%;
+}
+
+.inlineblock {
+    display: inline-block;
+}
+
+.applyborder {
+    border: 1px solid #000;
+}
+
+.divbutton {
+    margin: 10px;
+    width: 300px;
+    height: 200px;
+    cursor: pointer;
+}
+#btntype1 {
+    background-color: #ccc;
+    text-shadow: 3px 4px rgba(0,0,0,0.2);
+}
+#btntype2 {
+    background-color: #333;
+    text-shadow: 3px 4px rgba(255,255,255,0.2);
+}

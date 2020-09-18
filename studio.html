@@ -1,0 +1,132 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" type="text/css" href="css/modal.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <script src="js/studio/addNewVideo.js"></script>
+        <script src="js/studio/createVideoForm.js"></script>
+        <script src="js/studio/downloadScore.js"></script>
+        <script src="js/studio/dragElement.js"></script>
+        <script src="js/studio/duplicateVideo.js"></script>
+        <script src="js/studio/editVideo.js"></script>
+        <script src="js/loadScore.js"></script>
+        <script src="js/studio/modal.js"></script>
+        <script src="js/studio/newScore.js"></script>
+        <script src="js/studio/play.js"></script>
+        <script src="js/studio/playScore.js"></script>
+        <script src="js/studio/removeVideo.js"></script>
+        <script src="js/studio/script.js"></script>
+        <script src="js/showScore.js"></script>
+        <script src="js/studio/stopScore.js"></script>
+        <script src="js/studio/storeScore.js"></script>
+    </head>
+    <body>
+        <!-- Links (sit on top) -->
+        <div class="w3-top">
+            <div class="w3-row w3-large w3-light-grey">
+                <div class="w3-col s3">
+                    <a href="index.html" class="w3-button w3-block">Home</a>
+                </div>
+                <div class="w3-col s3">
+                    <a href="#" class="w3-button w3-hover-red w3-block" onclick="reloadContent('studio_gallery.html');">Studio/Gallery</a>
+                </div>
+                <div class="w3-col s3">
+                    <a href="#" class="w3-button w3-block" onclick="reloadContent('aboutContent.html');">About Us</a>
+                </div>
+                <div class="w3-col s3">
+                    <a href="#" class="w3-button w3-hover-green w3-block" onclick="reloadContent('contact.html');">Contact</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="menu">
+            <button
+                class="btn btn-ani"
+                onclick="playScore(piece,times);"
+                title="Play">&#x25b6;</button>
+            <button
+                class="btn btn-ani"
+                onclick="stopScore(piece,times);"
+                title="Stop">&#x23F9;</button>
+            <button
+                class="btn btn-ani"
+                onclick="showHide('info_form');newScore(piece);"
+                title="New">&#x1f5ce;</button>
+            <button
+                class="btn btn-ani"
+                onclick="downloadScore(piece);"
+                title="Download">&#x2b07;</button>
+            <button
+                class="btn btn-ani"
+                onclick="document.getElementById('file-input').click();"
+                title="Upload">&#x2b06;</button>
+            <input
+                type="file"
+                id="file-input"
+                onchange="loadScore();showHide('info_form');"
+                style="display: none;" />
+            <button
+                class="btn btn-ani"
+                onclick="showHide('info_form');"
+                title="Info">&#x1f6c8;</button>
+            <button
+                class="btn btn-ani"
+                onclick="storeScore(piece);"
+                title="Store online">&#x2b06;&#x2601;</button>
+        </div>
+
+        <div id="video_form" class="modal">
+            <span onclick="showHide('video_form');" class="close" title="Close Modal">×</span>
+                <div class="container modal-content" id="video_input_form">
+                <!-- Here goes the auto generated form -->
+                </div>
+                <div class="clearfix">
+                    <button
+                        id="add_button"
+                        class="formbtn formbtn_cancel"
+                        onclick="saveVideo(piece);">Add</button>
+                    <button class="formbtn formbtn_cancel" onclick="showHide('video_form');" >Cancel</button>
+                </div>
+        </div>
+
+        <div id="info_form" class="modal">
+            <span onclick="showHide('info_form');" class="close" title="Close Modal">×</span>
+            <div class="container modal-content">
+            <label>Título</label>
+            <br>
+            <input class="input_text_0" type="text" value="" id="title"/>
+            <br>
+            <label>Autor</label>
+            <br>
+            <input class="input_text_0" type="text" value="" id="author"/>
+            <br>
+            <label>Data</label>
+            <br>
+            <input class="input_text_0" type="text" value="" id="date"/>
+            <br>
+            <label>Descrição</label>
+            <br>
+            <input class="input_text_0" type="text" value="" id="description"/>
+            <br>
+            <label>License</label>
+            <br>
+            <select>
+            <option id='license'>Creative Commons</option>
+            </select>
+            </div>
+            <div class="clearfix">
+                <button class="formbtn formbtn_cancel" onclick="showHide('info_form');" >Close</button>
+            </div>
+        </div>
+
+        <div class="menu-1">
+            <table id="score_table"></table>
+            <br />
+            <button
+                onclick="createVideoForm(-1);showHide('video_form');"
+                class="formbtn">Add Video</button>
+        </div>
+            <div id="ytplayer"></div>
+    </body>
+</html>
