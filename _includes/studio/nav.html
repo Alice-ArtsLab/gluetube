@@ -1,0 +1,35 @@
+<div class="menu">
+    <button
+        class="btn btn-ani"
+        onclick="playScore(piece,times);"
+        title="Play">&#x25b6;</button>
+    <button
+        class="btn btn-ani"
+        onclick="stopScore(piece,times);"
+        title="Stop">&#x23F9;</button>
+    <button
+        class="btn btn-ani"
+        onclick="showHide('info_form');newScore(piece);"
+        title="New">&#x1f5ce;</button>
+    <button
+        class="btn btn-ani"
+        onclick="downloadScore(piece);"
+        title="Download">&#x2b07;</button>
+    <button
+        class="btn btn-ani"
+        onclick="document.getElementById('file-input').click();"
+        title="Upload">&#x2b06;</button>
+    <input
+        type="file"
+        id="file-input"
+        onchange="loadScore();showHide('info_form');"
+        style="display: none;" />
+    <button
+        class="btn btn-ani"
+        onclick="showHide('info_form');"
+        title="Info">&#x1f6c8;</button>
+    <button
+        class="btn btn-ani"
+        onclick="storeScore(piece);"
+        title="Store online">&#x2b06;&#x2601;</button>
+</div>
