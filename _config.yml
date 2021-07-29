@@ -1,5 +1,5 @@
 title: GlueTube
-baseurl: "/" # the subpath of your site, e.g. /blog
+baseurl: "/webart/gluetube" # the subpath of your site, e.g. /blog
 
 # Build settings
 theme: minima

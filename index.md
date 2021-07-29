@@ -5,25 +5,25 @@ description: Collage tool using digital media!
 ---
 <!-- Slideshow -->
 <div class="w3-display-container mySlides">
-    <img src="/assets/images/TM2_6551.jpg" style="width:100%;height:500px">
+    <img src="/webart/gluetube/assets/images/TM2_6551.jpg" style="width:100%;height:500px">
     <div class="w3-display-topleft w3-container w3-padding-32">
         <span class="w3-white w3-padding-large w3-animate-bottom">Performance created using Gluetube.</span>
     </div>
 </div>
 <div class="w3-display-container mySlides">
-    <img src="/assets/images/TM2_6551.jpg" style="width:100%;height:500px">
+    <img src="/webart/gluetube/assets/images/TM2_6551.jpg" style="width:100%;height:500px">
     <div class="w3-display-topmiddle w3-container w3-padding-32">
         <span class="w3-white w3-padding-large w3-animate-bottom">TESTE COM DUAS IMAGENS</span>
     </div>
 </div>
 <div class="w3-display-container mySlides">
-    <img src="/assets/images/TM2_6551.jpg" style="width:100%;height:500px">
+    <img src="/webart/gluetube/assets/images/TM2_6551.jpg" style="width:100%;height:500px">
     <div class="w3-display-topright w3-container w3-padding-32">
         <span class="w3-white w3-padding-large w3-animate-bottom">TESTE COM TRÊS IMAGENS</span>
     </div>
 </div>
 <div class="w3-display-container mySlides">
-    <img src="/assets/images/TM2_6551.jpg" style="width:100%;height:500px">
+    <img src="/webart/gluetube/assets/images/TM2_6551.jpg" style="width:100%;height:500px">
     <div class="w3-display-topmiddle w3-container w3-padding-32">
         <span class="w3-white w3-padding-large w3-animate-bottom">TESTE COM QUATRO IMAGENS</span>
     </div>

@@ -1,5 +1,5 @@
 <?php
-    $dir = __DIR__ . "/assets/music_book/";
+    $dir = __DIR__ . "/webart/gluetube/assets/music_book/";
 
     if ($handle = opendir($dir)) {
         while ($entry = readdir($handle)) {
