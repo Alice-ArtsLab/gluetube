@@ -1,5 +1,12 @@
 ---
-layout: gallery
+layout: page
+title: GLUETUBE
+description: Collage tool using digital media!
 ---
-<script>listScores();</script>
-<div id="list_server_score"></div>
+
+<div>
+{{ site.scores }}
+{% for item in site.scores %}
+	{{ item }}
+{% endfor %}
+</div>

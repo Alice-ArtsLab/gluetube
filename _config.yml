@@ -1,5 +1,16 @@
 title: GlueTube
-baseurl: "/" # the subpath of your site, e.g. /blog
+baseurl: "/webart/gluetube" # the subpath of your site, e.g. /blog
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - update.sh
+  - makefile
 
 # Build settings
 theme: minima
+
+collections:
+  scores:
+      output: true
+      permalink: '/:collection/:path/'
