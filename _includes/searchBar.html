@@ -1,0 +1,49 @@
+<div class="columns">
+
+    <div class="column">
+        
+        <div class="dropdown is-hoverable">
+            <div class="dropdown-trigger">
+              <button class="button" aria-haspopup="true" aria-controls="dropdown-menu3">
+                <span>Filtrar</span>
+              </button>
+            </div>
+            <div class="dropdown-menu" id="dropdown-menu3" role="menu">
+                <div class="dropdown-content">
+                    Categorias
+                    {% for item in site.data.categories %}
+                        <a href="{{ item.category_title | datapage_url: 'categories' }}" class="dropdown-item">
+                            {{ item.category_title }}
+                        </a>    
+                    {% endfor %}
+                    <hr class="dropdown-divider">
+
+                    Autores
+                    {% for item in site.data.authors %}
+                        <a href="{{ item.author_name | datapage_url: 'authors' }}" class="dropdown-item">
+                            {{ item.author_name }}
+                        </a>    
+                    {% endfor %}
+                </div>
+            </div>
+            <hr class="dropdown-divider">
+        </div>
+    </div>
+
+    <!-- <div class="column is-three-fifths ">
+        <p class="control has-icons-left">
+            <input class="input" type="search" placeholder="Pesquisar">
+            <span class="icon is-small is-left">
+              <i class="fas fa-search"></i>
+            </span>
+        </p>
+    </div> -->
+
+    <!-- <div class="column">
+        <div class="field is-grouped">
+            <div class="control">
+            <button class="button is-link">Pesquisar</button>
+            </div>
+        </div>
+    </div> -->
+</div>
