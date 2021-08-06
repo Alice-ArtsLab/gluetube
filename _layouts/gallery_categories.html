@@ -17,7 +17,7 @@
 						{% for track in site.data.studio %}
 							{% assign item = track[1] %}
 							{% if item.category == page.title %}
-								<h2><a href="{{ item.title | datapage_url: 'studio' }}">{{ item.title }}</a></h2>
+								<h2><a href="{{ site.baseurl }}/{{ item.title | datapage_url: 'studio' }}">{{ item.title }}</a></h2>
 								<p>Date: {{ item.date }}</p>
 								<p>Description: {{ item.description }}</p>
 								<br><br>
