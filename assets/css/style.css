@@ -47,12 +47,13 @@ body {
 
 .menu {
     position: relative;
-    margin-top:60px;
+    margin-top:38px;
 }
 
 .menu-1 {
+    min-width: 681px;
     position: relative;
-	float: left;
+    float: left;
     padding-left: 15px;
 }
 

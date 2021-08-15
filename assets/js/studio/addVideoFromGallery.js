@@ -1,20 +1,14 @@
 function addVideoFromGallery() {
     var tr, td, i, j, txtValue;
-    var node, piece, video;
-
-    piece = Object.create(Piece);
+    var node, video;
 
     var div = document.getElementById("temporary_div");
-
     node = document.getElementById("title");
     var title = node.textContent || node.innerText;
-
     node = document.getElementById("author");
     var author = node.textContent || node.innerText;
-
     node = document.getElementById("date");
     var date = node.textContent || node.innerText;
-
     node = document.getElementById("description");
     var description = node.textContent || node.innerText;
 

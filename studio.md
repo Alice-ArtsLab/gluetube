@@ -12,6 +12,8 @@ description: Collage tool using digital media!
     <button
         onclick="createVideoForm(-1);showHide('video_form');"
         class="formbtn">Add Video</button>
+    <br /><br /><br />
+    {% include studio/progressBar.html %}
 </div>
 
 <div id="ytplayer"></div>

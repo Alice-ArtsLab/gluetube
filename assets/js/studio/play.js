@@ -9,7 +9,8 @@ function play(video, index) {
     element.setAttribute('id', idContainer);
     element.setAttribute('class', 'dragDiv');
     element.style.left = video.posx;
-    element.style.top = video.posy + 60;
+    element.style.top = video.posy;
+    element.style.zIndex = 2;
     document.getElementById('ytplayer').appendChild(element);
 
     // DIV barra de move up.
@@ -48,28 +49,22 @@ function play(video, index) {
             width: "100%",
             videoId: video.url,
             playerVars: {
-                modestbranding: 0, // Hide the Youtube Logo
+                modestbranding: 1, // Hide the Youtube Logo
                 fs: 1, // Hide the full screen button
-                controls: 1, // Show pause/play buttons in player
-                showinfo: 1, // Hide the video title
+                controls: 0, // Show pause/play buttons in player
+                showinfo: 0, // Hide the video title
                 rel: 0, // Hide related videos
-                cc_load_policy: 0, // Hide closed captions
+                cc_load_policy: 1, // Hide closed captions
                 iv_load_policy: 3, // Hide the Video Annotations
-                autohide: 0, // Hide video controls when playing
+                autohide: 1, // Hide video controls when playing
                 autoplay: 1, // Auto-play the video on load
-                end: video.endTime,
+                end: video.endTime
             },
             events: {
                 onReady: function(e) {
                     e.target.setVolume(video.volume);
                     e.target.seekTo(video.startTime);
                     e.target.playVideo();
-                },
-                onStateChange: function(e) {
-                    if (e.data === YT.PlayerState.ENDED) {
-                        e.target.seekTo(video.startTime);
-                        e.target.playVideo();
-                    }
                 }
             }
         });

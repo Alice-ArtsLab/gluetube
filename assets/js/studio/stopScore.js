@@ -10,4 +10,6 @@ function stopScore(piece, times) {
     while (node.firstChild) {
         node.removeChild(node.lastChild);
     }
+
+    stopBar("clear");
 }
