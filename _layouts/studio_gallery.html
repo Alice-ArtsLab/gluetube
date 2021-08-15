@@ -4,7 +4,7 @@
         <!-- Nav -->
         {% include nav.html %}
         <!-- Nav studio -->
-        {% include /studio/nav.html %}
+        
         {% include /studio/modal.html %}
 
         <div id="temporary_div" style="display:none;">
@@ -17,14 +17,9 @@
                 {% for item in page.score %}
                     <tr>
                         <td>{{ item.url }}</td>
-                        <td>{{ item.startTime }}</td>
-                        <td>{{ item.endTime }}</td>
                         <td>{{ item.volume }}</td>
-                        <td>{{ item.posx }}</td>
-                        <td>{{ item.posy }}</td>
                         <td>{{ item.width }}</td>
                         <td>{{ item.height }}</td>
-                        <td>{{ item.schedule }}</td>
                     </tr>
                 {% endfor %}
             </table>
