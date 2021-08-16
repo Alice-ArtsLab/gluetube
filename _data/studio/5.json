@@ -1,0 +1,34 @@
+{
+  "id": "5",
+  "title": "BLM - 1# machine - 5",
+  "author": "Avner Maximiliano",
+  "date": "2019-03-31",
+  "description": "texto",
+  "category": "arte",
+  "score": [
+    {
+      "url": "yktrUMoc1Xw",
+      "startTime": 46,
+      "endTime": 93,
+      "repeat": 1,
+      "volume": 40,
+      "posx": 560,
+      "posy": 25,
+      "width": 600,
+      "height": 450,
+      "schedule": 0
+    },
+    {
+      "url": "VcN0dz_RGUo",
+      "startTime": 0,
+      "endTime": 35,
+      "repeat": 1,
+      "volume": 55,
+      "posx": 560,
+      "posy": 25,
+      "width": 600,
+      "height": 450,
+      "schedule": 12000
+    }
+  ]
+}
