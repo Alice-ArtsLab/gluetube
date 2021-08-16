@@ -1,6 +1,6 @@
 function storeScore(piece){
     var xhr = new XMLHttpRequest();
-    var url = "storeScore.php";
+    var url = "/webart/gluetube/storeScore.php";
     xhr.open("POST", url, true);
     xhr.setRequestHeader("Content-type", "application/json");
     var vars = JSON.stringify(piece)

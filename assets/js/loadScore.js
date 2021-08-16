@@ -17,7 +17,7 @@ function loadScore(filename) {
     //Load score from the server
     if (filename != null){
         var xhr = new XMLHttpRequest();
-        var url = "loadScore.php";
+        var url = "/webart/gluetube/loadScore.php";
         xhr.open("POST", url, true);
         xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
         xhr.onreadystatechange = function() {

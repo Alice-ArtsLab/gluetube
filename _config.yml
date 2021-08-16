@@ -1,5 +1,6 @@
 title: GlueTube
-baseurl: "/~marilellis/gluetube" # the subpath of your site, e.g. /blog
+
+baseurl: "/webart/gluetube" # the subpath of your site, e.g. /blog
 
 exclude:
   - Gemfile

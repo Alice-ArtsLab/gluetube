@@ -3,7 +3,6 @@ layout: page
 title: GALERIA
 description: Collage tool using digital media!
 ---
-
 {% include searchBar.html %}
 
 <div class="container">
@@ -31,3 +30,4 @@ description: Collage tool using digital media!
 			</div>
 	{% endfor %}
 </div>
+
