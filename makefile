@@ -1,3 +1,2 @@
-all:
-	sg www-data -c "bundle exec jekyll build --destination=../public_html/gluetube --trace"
-
+all: 
+	sg www-data -c "bundle exec jekyll build --destination=/var/www/html/webart/gluetube --trace"
