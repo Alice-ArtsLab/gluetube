@@ -22,7 +22,7 @@ var Video = {
     url: "none",
     startTime: 0,
     endTime: 0,
-    volume: 0,
+    volume: 100,
     posx: 0,
     posy: 0,
     width: 800,

@@ -1,107 +1,126 @@
 <!-- Include Video Form -->
 <div id="video_form" class="modal">
-    <span onclick="showHide('video_form');" class="close" title="Close Modal">×</span>
-        <div class="container modal-content" id="video_input_form">
-        <!-- Here goes the auto generated form -->
-        </div>
-        <div class="clearfix">
-            <button
-                id="add_button"
-                class="formbtn formbtn_cancel"
-                onclick="saveVideo(piece);">Add</button>
-            <button class="formbtn formbtn_cancel" onclick="showHide('video_form');" >Cancel</button>
-        </div>
+  <span onclick="showHide('video_form');" class="close" title="Close Modal">×</span>
+      <div class="container modal-content" id="video_input_form">
+              <span>URL </span>
+              <input type="text" id="url" value="none">
+              <!--
+              <span>Start-Time </span>
+              <input type="text" id="startTime" value="0"><br>
+              <span>End-Time </span>
+              <input type="text" id="endTime" value="0"><br>
+              <span>Volume </span>
+              <input type="text" id="volume" value="0"><br>
+              <span>Pos-X </span>
+              <input type="text" id="posx" value="0"><br>
+              <span>Pos-Y </span>
+              <input type="text" id="posy" value="0"><br>
+              <span>Width </span>
+              <input type="text" id="width" value="800"><br>
+              <span>Height </span>
+              <input type="text" id="height" value="600"><br>
+              <span>Schedule </span>
+              <input type="text" id="schedule" value="0">
+              -->
+      </div>
+      <div class="clearfix">
+          <button
+              id="add_button"
+              class="formbtn formbtn_cancel"
+              onclick="saveVideo(piece);">Add</button>
+          <button class="formbtn formbtn_cancel" onclick="showHide('video_form');" >Cancel</button>
+      </div>
 </div>
 
 <!-- Project Info Form -->
 <div id="info_form" class="modal">
-    <div class="modal-background"></div>
-    <div class="modal-card">
-      <header class="modal-card-head">
-        <p class="modal-card-title">Informações do Projeto</p>
-        <button class="delete formbtn_cancel" aria-label="close" onclick="showHide('info_form');"></button>
-      </header>
-      <section class="modal-card-body">
-        <div class="container modal-content">
+  <div class="modal-background"></div>
+  <div class="modal-card">
+    <header class="modal-card-head">
+      <p class="modal-card-title">Informações do Projeto</p>
+      <button class="delete formbtn_cancel" aria-label="close" onclick="showHide('info_form');"></button>
+    </header>
+    <section class="modal-card-body">
+      <div class="container modal-content">
 
-            <div class="field">
-                <label class="label">Título</label>
-                <div class="control">
-                  <input class="input" type="text" placeholder="Text input" id="title">
-                </div>
-            </div>
+          <div class="field">
+              <label class="label">Título</label>
+              <div class="control">
+                <input class="input" type="text" placeholder="Text input" id="title">
+              </div>
+          </div>
 
-            <div class="field">
-                <label class="label">Autor</label>
-                <div class="control">
-                  <input class="input" type="text" placeholder="Text input" id="author">
-                </div>
-            </div>
+          <div class="field">
+              <label class="label">Autor</label>
+              <div class="control">
+                <input class="input" type="text" placeholder="Text input" id="author">
+              </div>
+          </div>
 
-            <div class="field">
-                <label class="label">Data</label>
-                <div class="control">
-                  <input class="input" type="text" placeholder="Text input" id="date">
-                </div>
-            </div>
+          <div class="field">
+              <label class="label">Data</label>
+              <div class="control">
+                <input class="input" type="text" placeholder="Text input" id="date">
+              </div>
+          </div>
 
-            <div class="field">
-                <label class="label">Descrição</label>
-                <div class="control">
-                  <textarea class="textarea" type="text" value="" placeholder="Textarea" id="description"></textarea>
-                </div>
-            </div>
+          <div class="field">
+              <label class="label">Descrição</label>
+              <div class="control">
+                <textarea class="textarea" type="text" value="" placeholder="Textarea" id="description"></textarea>
+              </div>
+          </div>
 
-            <div class="columns">
-                <div class="column">
-                    <label class="label">Licença</label>
-                    <div class="select">
-                        <select>
-                        <option id='license'>Creative Commons</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="column">
-                    <label class="label">Categoria</label>
-                    <div class="select">
-                        <select>
-                            Categorias
-                            {% for item in site.data.categories %}
-                                <option id="{{ item.id }}">
-                                    {{ item.category_title }}
-                                </option>    
-                            {% endfor %}
-                        </select>
-                    </div>
-                </div>
-                <div class="column">
-                    <label class="label">Thumbnail</label>
-                    <div class="file">
-                        <label class="file-label">
-                          <input class="file-input" type="file" name="resume">
-                          <span class="file-cta">
-                            <span class="file-icon">
-                              <i class="fas fa-upload"></i>
-                            </span>
-                            <span class="file-label">
-                              Selecione um arquivo...
-                            </span>
+          <div class="columns">
+              <div class="column">
+                  <label class="label">Licença</label>
+                  <div class="select">
+                      <select>
+                      <option id='license'>Creative Commons</option>
+                      </select>
+                  </div>
+              </div>
+              <div class="column">
+                  <label class="label">Categoria</label>
+                  <div class="select">
+                      <select>
+                          Categorias
+                          {% for item in site.data.categories %}
+                              <option id="{{ item.id }}">
+                                  {{ item.category_title }}
+                              </option>    
+                          {% endfor %}
+                      </select>
+                  </div>
+              </div>
+              <div class="column">
+                  <label class="label">Thumbnail</label>
+                  <div class="file">
+                      <label class="file-label">
+                        <input class="file-input" type="file" name="resume">
+                        <span class="file-cta">
+                          <span class="file-icon">
+                            <i class="fas fa-upload"></i>
                           </span>
-                        </label>
-                    </div>
-                </div>
-            </div>
-            
-            <br>
-            <br>
-        </div>
-      </section>
-      <footer class="modal-card-foot">
-        <div class="clearfix">
-            <button class="button is-success" onclick="showHide('info_form');" >Salvar</button>
-            <button class="button formbtn_cancel" onclick="showHide('info_form');" >Cancelar</button>
-        </div>
-      </footer>
-    </div>
+                          <span class="file-label">
+                            Selecione um arquivo...
+                          </span>
+                        </span>
+                      </label>
+                  </div>
+              </div>
+          </div>
+          
+          <br>
+          <br>
+      </div>
+    </section>
+    <footer class="modal-card-foot">
+      <div class="clearfix">
+          <button class="button is-success" onclick="showHide('info_form');" >Salvar</button>
+          <button class="button formbtn_cancel" onclick="showHide('info_form');" >Cancelar</button>
+      </div>
+    </footer>
+  </div>
 </div>
 

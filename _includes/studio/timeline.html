@@ -1,0 +1,170 @@
+<head>
+    <style> 
+        div.time {
+        border: 1px solid black;
+        background-color: lightblue;
+        width: 270px;
+        height: 20px;
+        position: relative;
+        border-width: 1px 4px 1px 1px;
+        cursor: auto;
+        }
+
+        th, td {
+        border: solid 1px; 
+        padding: 0 
+        }
+
+        td:first-child { 
+            width: 5%  
+        }
+
+        #table-scroll {
+        height:150px;
+        overflow:auto;  
+        margin-top:20px;
+        }
+
+        #timeline{
+        table-layout: auto;
+        width: 100%;
+        border: 1px solid black;
+        }
+
+        .title {
+            font-size: 1rem;
+            font-weight: 600;
+            line-height: 1.125;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="table-scroll">
+        <table id='timeline'>
+            <tr>
+                <td><button class="button" onclick="add()">Add New line</button></td>
+                <td>Régua</td>
+            </tr>
+        </table>
+    </div> 
+
+    <!--div id='properties'></div-->
+
+    <script>
+    count = 0;
+
+    function add() {
+        var table = document.getElementById('timeline');
+        var line = document.createElement("TR");
+        var cell1 = document.createElement("TD");
+        var div = document.createElement("DIV");
+        var button = document.createElement("BUTTON");
+        button.innerHTML = "x";
+        button.addEventListener("click", remove);
+        cell1.className = "title";
+        cell1.innerHTML = "Titulo " + count;
+        div.id = "properties";
+        cell1.appendChild(div);
+        cell1.appendChild(button);
+        line.appendChild(cell1);
+        var cell2 = document.createElement("TD");
+        var div = document.createElement("DIV");
+        div.id = "myDIV" + count;
+        div.className ="time";
+        cell2.appendChild(div);
+        line.appendChild(cell2);
+        table.appendChild(line);
+        dragElement(div);
+        count++;
+        }
+
+    function remove(e){
+        var element = e.target || e.srcElement;
+        var row = element.parentNode.parentNode;
+        row.parentNode.removeChild(row);
+    }
+
+    function dragElement(element) {
+        element.onmousedown = mouseDown;
+        var offLeft;
+
+        function mouseDown(e) {
+            e = e || window.event;
+            e.preventDefault();
+            // Pega a posição do click
+            offLeft = e.clientX - e.srcElement.offsetLeft;
+            showProperties();
+            // Se clicou no canto, não arrasta pois irá redimensionar
+            if (e.offsetX > element.offsetWidth - 10){
+            document.onmousemove = resize;
+            }else{
+            document.onmousemove = elementDrag;
+            }
+            document.onmouseup = closeDragElement;
+        }
+
+        function elementDrag(e) {
+            e = e || window.event;
+            e.preventDefault();
+            element.style.cursor = "crosshair";
+            var rect = element.parentNode.getBoundingClientRect();
+            var position =  e.clientX - offLeft;
+            // Limita ao container pai
+            if (position < rect.left)
+            return;
+            position -= rect.left;
+            element.style.left = (position) + "px";;
+            showProperties();
+            updateTimeline();
+        }
+
+        function closeDragElement() {
+            /* stop moving when mouse button is released:*/
+            document.onmouseup = null;
+            document.onmousemove = null;
+            element.style.cursor = "auto";
+        }
+
+        function showProperties(){
+            var property = document.getElementById("properties");
+            property.innerHTML = "x: " + element.offsetLeft + "<br>";
+            property.innerHTML += "width: " + element.offsetWidth + "<br>";
+            property.innerHTML += "id: " + element.id + "<br>";    
+        }
+
+        function resize(e){
+            e = e || window.event;
+            e.preventDefault();
+            element.style.cursor = "w-resize";
+            var width =  e.clientX - element.offsetLeft;
+            element.style.width = (width) + "px";
+            showProperties();
+            updateTimeline();
+        }
+        
+        function updateTimeline(){
+            var table = document.getElementById('timeline');
+            console.log(table.offsetWidth, (element.offsetLeft + element.offsetWidth));
+            
+        }
+    }
+
+    function allowDrop(ev) {
+        ev.preventDefault();
+    }
+
+    function drag(ev) {
+        ev.dataTransfer.setData("text", ev.target.id);
+    }
+
+    function drop(ev) {
+        ev.preventDefault();
+        var data = ev.dataTransfer.getData("text");
+        ev.target.appendChild(document.getElementById(data));
+    }
+
+    </script>
+
+</body>
