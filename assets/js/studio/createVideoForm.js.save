@@ -1,6 +1,8 @@
 function createVideoForm(item) {
     var container = document.getElementById("video_input_form");
-    container.removeChild(container.lastChild);
+    hile (container.lastChild){
+        container.removeChild(container.lastChild);
+    }
 
     // Saves the id if the video exists
     var element = document.createElement("SPAN");

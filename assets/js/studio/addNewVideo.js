@@ -8,9 +8,9 @@ function saveVideo(piece) {
         video = piece.score[index];
     }
     const keys = Object.keys(Video);
-    for (const key of keys) {
-        video[key] = document.getElementById(key).value;
-    }
+    //for (const key of keys) {
+        video[0] = document.getElementById("url").value;
+    //}
 
     showScore(piece);
     showHide('video_form');
