@@ -1,25 +1,10 @@
-<!-- Include Video Form -->
-<div id="video_form" class="modal">
-    <span onclick="showHide('video_form');" class="close" title="Close Modal">×</span>
-        <div class="container modal-content" id="video_input_form">
-        <!-- Here goes the auto generated form -->
-        </div>
-        <div class="clearfix">
-            <button
-                id="add_button"
-                class="formbtn formbtn_cancel"
-                onclick="saveVideo(piece);">Add</button>
-            <button class="formbtn formbtn_cancel" onclick="showHide('video_form');" >Cancel</button>
-        </div>
-</div>
-
 <!-- Project Info Form -->
 <div id="info_form" class="modal">
     <div class="modal-background"></div>
     <div class="modal-card">
       <header class="modal-card-head">
         <p class="modal-card-title">Informações do Projeto</p>
-        <button class="delete formbtn_cancel" aria-label="close" onclick="showHide('info_form');"></button>
+        <button class="delete formbtn_cancel" aria-label="close" onclick="modal('info_form');"></button>
       </header>
       <section class="modal-card-body">
         <div class="container modal-content">
@@ -35,13 +20,6 @@
                 <label class="label">Autor</label>
                 <div class="control">
                   <input class="input" type="text" placeholder="Text input" id="author">
-                </div>
-            </div>
-
-            <div class="field">
-                <label class="label">Data</label>
-                <div class="control">
-                  <input class="input" type="text" placeholder="Text input" id="date">
                 </div>
             </div>
 
@@ -63,32 +41,9 @@
                 </div>
                 <div class="column">
                     <label class="label">Categoria</label>
-                    <div class="select">
-                        <select>
-                            Categorias
-                            {% for item in site.data.categories %}
-                                <option id="{{ item.id }}">
-                                    {{ item.category_title }}
-                                </option>    
-                            {% endfor %}
-                        </select>
-                    </div>
+                    <div class="control">
+                  <input class="input" type="text" placeholder="Text input" id="category">
                 </div>
-                <div class="column">
-                    <label class="label">Thumbnail</label>
-                    <div class="file">
-                        <label class="file-label">
-                          <input class="file-input" type="file" name="resume">
-                          <span class="file-cta">
-                            <span class="file-icon">
-                              <i class="fas fa-upload"></i>
-                            </span>
-                            <span class="file-label">
-                              Selecione um arquivo...
-                            </span>
-                          </span>
-                        </label>
-                    </div>
                 </div>
             </div>
             
@@ -98,8 +53,8 @@
       </section>
       <footer class="modal-card-foot">
         <div class="clearfix">
-            <button class="button is-success" onclick="showHide('info_form');" >Salvar</button>
-            <button class="button formbtn_cancel" onclick="showHide('info_form');" >Cancelar</button>
+            <button class="button is-success" onclick="modal('info_form');storeScore(piece);" >Salvar</button>
+            <button class="button formbtn_cancel" onclick="modal('info_form');" >Cancelar</button>
         </div>
       </footer>
     </div>
