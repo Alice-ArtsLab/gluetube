@@ -1,0 +1,42 @@
+<html>
+    {% include head.html %}
+<body class="niagara">
+    <!-- Nav -->
+    {% include nav.html %}
+    <!-- Title -->
+    <div class="has-text-centered mt-6 mb-6 ">
+        <h1 class="title  pt-6 pb-6 textHintYellow"> {{page.title}} </h1>
+    </div>
+
+    <!-- body about primary -->
+    <div class="tile is-ancestor m-2 bianca">
+        <div class="tile is-4">
+            <div class="container p-6 m-4">
+                <h1 class="title has-text-centered"> <a href="{{page.linkone}}">{{page.titleone}}</a> </h1>
+            </div>
+        </div>
+        <div class="tile">
+            <div class="p-6 m-4">
+                {{page.contentone}} 
+            </div>
+        </div>
+      </div>
+
+      <!-- body about secundary -->
+    <div class="tile is-ancestor ml-2 mr-2 bianca">
+        <div class="tile">
+            <div class="p-6 m-4">
+                {{page.contenttwo}} 
+            </div>
+        </div>
+        <div class="tile is-4 ">
+            <div class="container p-6 m-4">
+                <h1 class="title has-text-centered"> <a href="{{page.linktwo}}">{{page.titletwo}}</a> </h1>
+            </div>
+        </div>
+      </div>
+
+    <!-- Footer -->
+    {% include footer.html %}
+</body>
+</html>

@@ -1,11 +1,18 @@
 <html>
     {% include /studio/head.html %}
-    <body>
+    <body >
         <!-- Nav -->
-        {% include nav.html %}
-        <!-- Nav studio -->
-        {% include /studio/nav.html %}
+        <div>
+            {% include nav.html %}
+        </div>
+        <!-- studio -->
 
-        {{ content }}
+        <div class="mt-3">
+            {% include /studio/studio.html %}
+        </div>
+       
+       
+        <!-- {{ content }} -->
+    
     </body>
 </html>

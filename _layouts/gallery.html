@@ -1,7 +1,35 @@
+<!DOCTYPE html>
 <html>
-    {% include /gallery/head.html %}
-    <body onload="listScores();">
-        
-        {{ content }}
-    </body>
+    {% include head.html %}
+<body class="niagara">
+    <!-- Nav -->
+    {% include nav.html %}
+
+    <!-- content -->
+
+    <!-- TITLE -->
+    <div class="container title has-text-centered mt-6 mb-6 ">
+            <h1 class="title is-2 textHintYellow"><b>{{ page.title }}</b></h1>
+            <p class="subtitle textHintYellow">{{ page.description }}</p>
+    </div>
+    <!-- Filtro -->
+    <div class="bianca mt-1">
+        {% include searchBar.html %}  
+    </div>
+    
+
+    <!-- Cards -->
+    <div class=".container bianca">
+        <div class="columns is-multiline is-gapless">
+            {% for track in site.data.studio %}
+                {% assign item = track[1] %}
+                    {% include card.html item=item %}
+            {% endfor %}
+            
+        </div>
+    </div>
+
+    <!-- Footer -->
+    {% include footer.html %}
+</body>
 </html>

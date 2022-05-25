@@ -1,0 +1,48 @@
+---
+layout: default
+---
+    <script src="/webart/gluetube/assets/js/playScore.js"></script>
+    <script src="/webart/gluetube/assets/js/script.js"></script>
+    <script src="/webart/gluetube/assets/js/stopScore.js"></script>
+    <script src="/webart/gluetube/assets/js/progressBar.js"></script>
+
+<textarea style="display:none;" id='score'>
+{{ page.score }}
+</textarea>
+
+<script>
+var piece =  Object.assign({}, Piece);
+
+var score = document.getElementById("score").value;
+score = score.replaceAll("=>",":");
+piece.score = JSON.parse(score);
+</script>
+
+<div class="w3-content" style="max-width:1100px;margin-top:60px;margin-bottom:80px">
+    <div class="w3-panel">
+        <h1 class="title is-2"><b>{{ page.title }}</b></h1>
+        <p>{{ page.author }}</p>
+    </div>
+
+Enjoy it!
+
+
+<div id="ytplayer"></div>
+
+<div class="column">
+    <nav class="panel">
+        <p class="panel-heading">
+            Preview
+        </p>
+        <div class="tile">
+            <button class="btn btn-ani" onclick="playScore(piece,times);" title="Play">&#x25b6;</button>
+            <button class="btn btn-ani" onclick="stopScore(piece,times);" title="Stop">&#x23F9;</button>
+            <div id="ytplayer"></div>
+        </div>
+    </nav>
+    {% include studio/progressBar.html %}
+</div>
+
+
+</div>
+</div>
