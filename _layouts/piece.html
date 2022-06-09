@@ -1,0 +1,24 @@
+---
+layout: default
+---
+
+<div class="w3-content" style="max-width:1100px;margin-top:60px;margin-bottom:80px">
+	<div class="w3-panel">
+		<h1 class="title is-2"><b>{{ page.title }}</b></h1>
+		<p>{{ page.author }}</p>
+	</div>
+
+	<div class="w3-container">
+        {% include searchBar.html %}
+		<div sytle="position:absolute; top:40px;">
+            <a href="{{ page.id | datapage_url: '/cinemas' | prepend: site.baseurl}}">Assistir</a>
+            <p>Author: <a href="{{ item.author | datapage_url: '/authors' | prepend: site.baseurl}}">
+                {{ page.author }}</a>
+            </p>
+            <p>Date: {{ page.date }}</p>
+            <p>Description: {{ page.description }}</p>
+            <p>Category: <a href="{{ page.category | datapage_url: '/categories' | prepend: site.baseurl}}">{{ page.category }}</a></p>
+            </div>
+		</div>
+	</div>
+</div>

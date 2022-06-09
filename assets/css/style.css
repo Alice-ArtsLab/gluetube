@@ -16,7 +16,7 @@ input[type=number] {
 }
 
 body {
-    background: #DCDCDC;
+    /* background: #DCDCDC; */
     font-family: sans-serif;
     line-height: 1.25;
     /* color: whitesmoke; */
@@ -57,7 +57,7 @@ body {
     padding-left: 15px;
 }
 
-/* .menu-0 {
+.menu-0 {
     width: 1155px;
     border: 1px solid white;
     position: static;
@@ -71,7 +71,7 @@ body {
     position: relative;
 	float: left;
     padding: 10px;
-}*/
+}
 
 /* BUTTON */
 .btn {

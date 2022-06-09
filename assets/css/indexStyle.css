@@ -1,5 +1,5 @@
 html,body,h1,h2,h3,h4 {font-family:"Lato", sans-serif}
-.mySlides {display:none}
+/* .mySlides {display:none} */
 /* .w3-tag, .fa {cursor:pointer}
 .w3-tag {height:15px;width:15px;padding:0;margin-top:6px} */
 
@@ -42,4 +42,51 @@ p{
 #btntype2 {
     background-color: #333;
     text-shadow: 3px 4px rgba(255,255,255,0.2);
+}
+/* Slide */
+.slidesize{
+    height: 500px;
+    max-height: 500px;
+}
+.flexcenter{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/*Fonte*/
+.roboto-thin{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+}
+.roboto-light{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
+.roboto-600{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+}
+
+/* background */
+
+/* Niagara */
+.niagara{
+    background-color: #09AA9C;
+}
+.mercury{
+    background-color: #E6E6E6;
+}
+.textHintYellow{
+    color: #FDFEFB;
+}
+.textTundora{
+    color: #4D4D4D;
+}
+.bianca{
+    background-color:#FDFEFB
+}
+
+/* Text color */
+.text-bianca{
+    color: #FDFEFB;
 }

@@ -1,0 +1,20 @@
+---
+layout: default
+---
+
+<!-- TITLE -->
+<div class="container title has-text-centered mt-6 mb-6 ">
+    <h1 class="title is-2"><b>  {{ page.category }}</b></h1>
+</div>
+
+<div class=".container">
+    <div class="columns is-multiline is-gapless">
+        {% for track in site.data.studio %}
+            {% assign item = track[1] %}
+            {% if item.category == page.category %}
+                {% include card.html item=item %}
+            {% endif %}
+        {% endfor %}
+    </div>
+</div>
+
